@@ -1,0 +1,21 @@
+local letters = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','1','2','3','4','5','6','7','8','9'}
+--// Aweclops is a new user and awehub was provably skidded after I leaked source lol //--
+local nitroamount = 50 -- Codes you wanna generate
+local characteramount = 16
+
+
+--// Randomizing the letters //--
+for i = 1,nitroamount do
+local pending = {}
+for i = 1,characteramount do
+table.insert(pending, letters[math.random(1,#letters)])
+end
+
+--// Randomizing the uppercase letters //--
+local loading = {}
+for i = math.random(1,characteramount),math.random(1,characteramount) do
+pending[i] = string.upper(pending[1])
+end
+
+print("discord.gift/"..table.concat(pending, ""))
+end
